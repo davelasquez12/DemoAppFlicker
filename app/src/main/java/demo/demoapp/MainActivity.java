@@ -10,9 +10,6 @@ import android.view.MenuInflater;
 
 public class MainActivity extends AppCompatActivity
 {
-	private Toolbar mToolbar;
-	private ViewPager mViewPager;
-	private TabLayout mTabLayout;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -20,13 +17,13 @@ public class MainActivity extends AppCompatActivity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		mToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-		mTabLayout = (TabLayout) findViewById(R.id.main_activity_tab_layout);
-		mViewPager = (ViewPager) findViewById(R.id.main_activity_view_pager);
+		Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+		TabLayout tabLayout = (TabLayout) findViewById(R.id.main_activity_tab_layout);
+		ViewPager viewPager = (ViewPager) findViewById(R.id.main_activity_view_pager);
 
-		setSupportActionBar(mToolbar);
-		setupViewPager(mViewPager);
-		mTabLayout.setupWithViewPager(mViewPager);
+		setSupportActionBar(toolbar);
+		setupViewPager(viewPager);
+		tabLayout.setupWithViewPager(viewPager);
 	}
 
 	@Override
@@ -40,7 +37,7 @@ public class MainActivity extends AppCompatActivity
 
 	private void setupViewPager(ViewPager viewPager)
 	{
-
+		
 	}
 
 }
