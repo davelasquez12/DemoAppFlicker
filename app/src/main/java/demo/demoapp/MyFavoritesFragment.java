@@ -36,8 +36,6 @@ public class MyFavoritesFragment extends Fragment
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater)
 	{
-		super.onCreateOptionsMenu(menu, inflater);
-
 		inflater.inflate(R.menu.main_menu, menu);
 		MenuItem menuItem = menu.findItem(R.id.menu_search);
 		menuItem.setVisible(false);		//hide the search icon so there is no search functionality in this fragment

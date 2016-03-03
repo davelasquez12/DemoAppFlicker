@@ -3,12 +3,14 @@ package demo.demoapp;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -26,27 +28,6 @@ public class MainActivity extends AppCompatActivity
 		setSupportActionBar(toolbar);				//initializes and displays toolbar in activity
 		setupViewPager(mViewPager);					//set up the view pager by adding the fragments and tab titles to it.
 		tabLayout.setupWithViewPager(mViewPager);	//wire up the tab layout to work in sync with the view pager
-
-		tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
-		{
-			@Override
-			public void onTabSelected(TabLayout.Tab tab)
-			{
-				mViewPager.setCurrentItem(tab.getPosition());
-			}
-
-			@Override
-			public void onTabUnselected(TabLayout.Tab tab)
-			{
-
-			}
-
-			@Override
-			public void onTabReselected(TabLayout.Tab tab)
-			{
-
-			}
-		});
 	}
 
 /*	@Override
@@ -54,7 +35,6 @@ public class MainActivity extends AppCompatActivity
 	{
 		MenuInflater menuInflater = getMenuInflater();
 		menuInflater.inflate(R.menu.main_menu, menu);
-
 		return true;
 	}*/
 
